@@ -3,7 +3,7 @@ name = "paralegal"
 version = "0.1.0"
 description = "A team of AI agents that works like a paralegal for California landlord-tenant and small business matters"
 requires-python = ">=3.10"
-dependencies = ["anthropic>=2.1"]
+dependencies = ["anthropic>=2.1", "eyecite>=2.7"]
 
 [project.optional-dependencies]
 dev = ["pytest"]

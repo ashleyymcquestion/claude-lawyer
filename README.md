@@ -24,7 +24,8 @@ you ──> supervising associate ──┬── legal researcher   searches of
 
 Built-in safeguards:
 - The researcher can only search and cite official legal sites (`paralegal/config.py`).
-- Every finished piece goes through a citation check in code. A case CourtListener
+- Every finished piece goes through a citation check in code. Case citations are found with
+  [eyecite](https://github.com/freelawproject/eyecite) (Free Law Project). A case CourtListener
   can't find is marked **NOT FOUND**, and the matter can't be approved until it's fixed.
 - Statute citations get a direct leginfo link so the reviewer can read the actual text.
 - Assumed facts are put in `[BRACKETS]`, and deadlines and urgent problems are flagged at the top.
@@ -33,10 +34,14 @@ Built-in safeguards:
 ## Setup
 
 1. Install Python 3.10 or newer.
-2. In this folder, run:
+2. In this folder, create a virtual environment and install:
    ```
+   python3 -m venv .venv
+   source .venv/bin/activate        # Windows: .venv\Scripts\activate
+   pip install -U pip setuptools
    pip install -e ".[dev]"
    ```
+   Run `source .venv/bin/activate` again in each new terminal before using the tool.
 3. Get an API key at https://console.anthropic.com and set it:
    ```
    export ANTHROPIC_API_KEY=sk-ant-...

@@ -7,12 +7,19 @@ case. Anything it can't confirm is flagged for the human reviewer.
 from __future__ import annotations
 
 import json
+import logging
 import re
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
 
+import eyecite
+from eyecite.models import FullCaseCitation, ShortCaseCitation
+
 from . import config
+
+# eyecite logs harmless "Unknown overlap case" warnings on dense legal text.
+logging.getLogger("eyecite").setLevel(logging.ERROR)
 
 # Code name as written -> leginfo lawCode.
 CA_CODES = {
@@ -42,13 +49,8 @@ STATUTE_RE = re.compile(
     rf"\b({_code_names})\s*(?:§§?|sections?|sec\.)\s*(\d+(?:\.\d+)*)",
     re.IGNORECASE,
 )
-# 10 Cal.3d 616, 123 Cal.App.4th 456, 45 Cal.Rptr.3d 12, 576 U.S. 644, 9 F.4th 1
-CASE_RE = re.compile(
-    r"\b(\d{1,4})\s+"
-    r"(Cal\.\s?(?:App\.\s?)?(?:\dd|\dth|Supp\.(?:\s?\dd)?)?|Cal\.\s?Rptr\.(?:\s?\dd)?"
-    r"|U\.S\.|S\.\s?Ct\.|F\.(?:\s?\dd|\s?\dth)?|F\.\s?Supp\.(?:\s?\dd)?)"
-    r"\s+(\d{1,5})\b"
-)
+# Case citations are found with eyecite (Free Law Project), which knows every
+# US reporter abbreviation and spacing variant.
 
 
 @dataclass
@@ -76,16 +78,34 @@ def extract(text: str) -> list[Citation]:
                 ),
                 note="Open the link and confirm the section says what the draft claims.",
             )
-    for m in CASE_RE.finditer(text):
-        cite = re.sub(r"\s+", " ", m.group(0))
-        found.setdefault(cite, Citation(kind="case", text=cite))
+    cases = eyecite.get_citations(text)
+    full = {
+        (c.groups["volume"], _norm(c.groups["reporter"])) for c in cases if isinstance(c, FullCaseCitation)
+    }
+    for c in cases:
+        if isinstance(c, FullCaseCitation):
+            cite = c.corrected_citation()
+            found.setdefault(cite, Citation(kind="case", text=cite))
+        elif isinstance(c, ShortCaseCitation):
+            # "10 Cal.3d at 630" should point back to a full citation in the draft.
+            if (c.groups["volume"], _norm(c.groups["reporter"])) not in full:
+                cite = c.matched_text()
+                found.setdefault(
+                    cite,
+                    Citation(
+                        kind="case",
+                        text=cite,
+                        note="Short-form cite with no full citation earlier in the draft.",
+                    ),
+                )
     return list(found.values())
 
 
 def verify(text: str) -> list[Citation]:
     """Extract citations and check case citations with CourtListener."""
     cites = extract(text)
-    cases = [c for c in cites if c.kind == "case"]
+    # Orphaned short cites already carry a note and can't be looked up alone.
+    cases = [c for c in cites if c.kind == "case" and not c.note]
     if not cases:
         return cites
     if not config.COURTLISTENER_TOKEN:

@@ -19,7 +19,14 @@ def test_extracts_statutes_and_cases():
     assert len(statutes) == 2  # the repeat of 1950.5 is merged
     assert "lawCode=CIV&sectionNum=1950.5" in statutes[0].link
     assert "lawCode=CCP&sectionNum=1161" in statutes[1].link
-    assert cases == ["10 Cal.3d 616", "123 Cal.App.4th 456"]
+    assert cases == ["10 Cal. 3d 616", "123 Cal. App. 4th 456"]
+
+
+def test_short_cite_needs_a_full_cite():
+    ok = citations.extract("Green v. Superior Court, 10 Cal.3d 616. Green, 10 Cal.3d at 630.")
+    assert [c.text for c in ok] == ["10 Cal. 3d 616"]
+    [orphan] = citations.extract("As held in Smith, 45 Cal.4th at 12.")
+    assert "no full citation" in orphan.note
 
 
 def test_cases_unverified_without_token(monkeypatch):
