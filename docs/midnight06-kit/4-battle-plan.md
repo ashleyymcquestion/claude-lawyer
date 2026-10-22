@@ -1,9 +1,10 @@
 # Midnight 06 grant battle plan
 
-The approach: **apply to everything you qualify for, every round, every month,
-and get stronger each time.** Monthly grants pick from whoever applied that
-month, so a "no" just means re-apply next month with more followers, more
-content and a sharper story.
+The approach: **apply to everything you qualify for, and re-apply every time
+the business gets meaningfully better.** A "no" just means coming back with
+more followers, more content, a first booking and a sharper story. Don't stake
+the business on any single grant: odds for the big ones are long, so the plan
+is many applications plus low-cost ways to start (see the proof sprint).
 
 Updated October 22, 2026, for a pre-revenue, women-owned creative duo in
 Irvine. Every packet in `applications/` has the official link, an eligibility
@@ -14,13 +15,13 @@ check and answers ready to paste.
 | # | Action | Why | Where |
 |---|---|---|---|
 | 1 | **File the LLC** (name check, LLC-1, then EIN) | Unlocks almost everything else | `5-llc-this-week.md` |
-| 2 | **Claim the same handle on TikTok, Instagram and YouTube** and post your first 3-5 videos | Every application gets stronger with something to show | |
-| 3 | **Amber Grant**: submit by **Oct 31, 8:59 PM in Irvine** | $10K-$15K a month, and it accepts business ideas | `applications/amber-grant.md` |
+| 2 | **Run the proof sprint**: launch the socials, contact 20 promoters and hotels, get one "yes" | Proof of demand is what winning applications have | `6-proof-sprint.md` |
+| 3 | **Amber Grant**: submit **Oct 30** (deadline Oct 31, 8:59 PM in Irvine) | $10K-$15K a month, and it accepts business ideas | `applications/amber-grant.md` |
 | 4 | **HerRise and Freed**: submit by Oct 31 *if the LLC is approved in time* and you're eligible; otherwise Nov 1 | $1,000 and $500 monthly | `applications/herrise.md`, `applications/freed-fellowship.md` |
 | 5 | Hello Alice and IFundWomen profiles (after the LLC) | Matched to future grants automatically | `applications/profiles.md` |
 
 ## November
-- Re-apply: Amber, HerRise, Freed (each month)
+- Re-apply to Amber when there's a real update (WomensNet's advice). HerRise and Freed each month
 - Draft and sign the **operating agreement**, which decides who owns the content (see `5-llc-this-week.md`)
 - Book a **free OC SBDC advisor** (Cal State Fullerton). Ask about pitch competitions and Orange County grants for creative startups
 - Start shooting: local Orange County / Los Angeles EDM events and shuffle meetups. Build the portfolio for free
