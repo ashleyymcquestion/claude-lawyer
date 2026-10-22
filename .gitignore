@@ -1,0 +1,6 @@
+matters/*
+!matters/.gitkeep
+__pycache__/
+*.egg-info/
+.env
+.venv/
