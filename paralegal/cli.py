@@ -6,7 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from . import matters, team
+from . import deals, matters, team
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -24,6 +24,13 @@ def main(argv: list[str] | None = None) -> int:
     ok.add_argument("--reviewer", required=True, help="Name of the person who reviewed it.")
     ok.add_argument("--notes", default="")
     ok.add_argument("--force", action="store_true", help="Approve after you fixed NOT FOUND citations by hand.")
+
+    dl = sub.add_parser("deals", help="Score a lead export and match it to cash buyers.")
+    dl.add_argument("leads", type=Path, nargs="?", help="Lead CSV from PropStream, DealMachine, etc.")
+    dl.add_argument("--buyers", type=Path, help="Cash-buyer CSV export.")
+    dl.add_argument("--inbox", type=Path, help="Score every lead CSV in this folder (for a scheduled job).")
+    dl.add_argument("--fee", type=float, default=10_000, help="Your assignment fee (default 10000).")
+    dl.add_argument("--rule", type=float, default=0.70, help="Share of ARV a cash buyer pays (default 0.70).")
 
     args = parser.parse_args(argv)
 
@@ -46,6 +53,14 @@ def main(argv: list[str] | None = None) -> int:
             print(exc, file=sys.stderr)
             return 1
         print(f"Approved by {status['reviewer']} at {status['reviewed']}")
+    elif args.command == "deals":
+        if args.inbox:
+            folders = deals.run_inbox(args.inbox, args.fee, args.rule)
+        elif args.leads and args.leads.exists():
+            folders = [deals.run(args.leads, args.buyers, args.fee, args.rule)]
+        else:
+            parser.error("give a lead CSV that exists, or --inbox FOLDER")
+        print("\n".join(str(f / "report.md") for f in folders) or "No new lead files.")
     return 0
 
 

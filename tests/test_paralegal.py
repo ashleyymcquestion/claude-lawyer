@@ -131,3 +131,52 @@ def test_cli_saves_matter(tmp_path, monkeypatch, capsys):
     assert cli.main(["ask", "Draft a repair request"]) == 0
     [folder] = list(tmp_path.iterdir())
     assert json.loads((folder / "status.json").read_text())["status"] == "pending_review"
+
+
+LEADS = """Property Address,City,Zip Code,Estimated Value,Building Sqft,Asking Price,Owner Occupied,Lists
+1 Oak St,Fresno,93701,300000,1000,120000,No,Vacant
+2 Elm St,Fresno,93701,300000,1000,200000,No,Absentee
+3 Pine St,Fresno,93702,300000,1000,,Yes,Pre-Foreclosure
+4 Ash St,Fresno,93701,80000,2000,,No,Vacant
+"""
+
+BUYERS = """Buyer Name,Phone,Zip,Cash Purchases,Max Price
+Big Fund LLC,555-0001,93701,12,500000
+Small Flipper,555-0002,93701,3,100000
+Far Away Inc,555-0003,90210,40,900000
+"""
+
+
+def test_deal_math_and_flags(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "DEALS_DIR", tmp_path / "out")
+    leads, buyers = tmp_path / "leads.csv", tmp_path / "buyers.csv"
+    leads.write_text(LEADS)
+    buyers.write_text(BUYERS)
+    from paralegal import deals
+
+    folder = deals.run(leads, buyers, fee=10_000, rule=0.70)
+    rows = {r["address"]: r for r in __import__("csv").DictReader((folder / "deals.csv").open())}
+    oak = rows["1 Oak St"]
+    # 300k x 70% - 1000 sqft x $55 = 155k buyer price, minus 10k fee
+    assert (oak["status"], oak["buyer_price"], oak["max_offer"]) == ("offer", "155000", "145000")
+    assert oak["matched_buyers"] == "Big Fund LLC"  # small flipper's cap too low, other is out of area
+    assert rows["2 Elm St"]["status"] == "negotiate"
+    assert rows["3 Pine St"]["status"] == "attorney"
+    assert rows["4 Ash St"]["status"] == "skip"
+    text = (folder / "report.md").read_text()
+    assert "PENDING HUMAN REVIEW" in text and "1695" in text and "[ESTIMATED]" in text
+
+
+def test_deals_inbox_processes_once(tmp_path, monkeypatch):
+    monkeypatch.setattr(config, "DEALS_DIR", tmp_path / "out")
+    inbox = tmp_path / "inbox"
+    inbox.mkdir()
+    (inbox / "buyers.csv").write_text(BUYERS)
+    (inbox / "fresno.csv").write_text(LEADS)
+    from paralegal import cli
+
+    assert cli.main(["deals", "--inbox", str(inbox)]) == 0
+    assert (inbox / "done" / "fresno.csv").exists() and (inbox / "buyers.csv").exists()
+    assert len(list((tmp_path / "out").iterdir())) == 1
+    assert cli.main(["deals", "--inbox", str(inbox)]) == 0
+    assert len(list((tmp_path / "out").iterdir())) == 1

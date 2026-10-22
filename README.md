@@ -75,6 +75,19 @@ python -m paralegal pending
 python -m paralegal approve matters/20261022-... --reviewer "Jane Attorney"
 ```
 
+## Wholesaling deal analyzer
+
+Plain code, no API key needed. Scores a lead export from PropStream, DealMachine or
+BatchLeads and matches each deal to cash buyers. It never contacts anyone.
+
+```bash
+python -m paralegal deals leads.csv --buyers buyers.csv --fee 10000
+python -m paralegal deals --inbox inbox      # for a daily scheduled job
+```
+
+See [docs/wholesaling-automation.md](docs/wholesaling-automation.md) for the full
+pipeline, the math and the California guardrails.
+
 ## Customizing
 
 - `knowledge/*.md`: the reference map every agent reads. Add your local rules, templates and firm preferences here.

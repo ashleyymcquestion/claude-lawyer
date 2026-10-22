@@ -1,5 +1,7 @@
 matters/*
 !matters/.gitkeep
+deals/
+inbox/
 __pycache__/
 *.egg-info/
 .env
