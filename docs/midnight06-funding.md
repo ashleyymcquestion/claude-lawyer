@@ -1,6 +1,6 @@
 # Midnight 06 LLC: funding plan
 
-Researched October 22, 2026, for a California creative/media/apparel LLC that is
+Researched October 22, 2026, for an Orange County, California creative/media/apparel LLC that is
 woman-owned and minority-owned. Deadlines change often and third-party grant
 lists are often wrong, so **confirm every deadline on the funder's own site
 before applying.** To refresh this list, run:
@@ -20,6 +20,19 @@ python -m paralegal ask "Find grants, loans and certifications for Midnight 06 L
 | WBENC (women) and NMSDC (minority) certification | Corporate supplier-diversity programs, and some grants require one | wbenc.org, nmsdc.org |
 | Make free profiles on **Hello Alice** and the **IFundWomen universal grant application** | They match you to new rounds automatically. Hello Alice doesn't publish rounds in advance | helloalice.com, ifundwomen.com |
 | Visit your local **Women's Business Center** or **SBDC** | Free advisors, help with applications, and early notice of local grants | sba.gov/local-assistance |
+
+## Orange County
+- **OCIE SBDC** (hosted by Cal State Fullerton): free one-on-one consulting and
+  workshops, in 20+ languages. Book an advisor first. They hear about local
+  grants before they're widely posted.
+- **OC Women's Business Center**: free accelerator workshops run with the SBDC
+  (sessions have been held at OC Workforce Solutions in Brea).
+- **County and city grants**: there's no open Orange County or city grant for
+  2026 right now. The county's $2,500 microbusiness grant ended in 2022. Check
+  the economic development pages for your city (Santa Ana, Anaheim, Irvine) a
+  few times a year.
+- **California Arts Council fellowships** are run by region. Apply through the
+  organization that covers Orange County when the 2027 window opens.
 
 ## Grants open now or recurring
 
@@ -87,4 +100,8 @@ such as the Amber Grant. Check every one before paying.
 - [CPUC: what is certification (GO 156)](https://www.cpuc.ca.gov/-/media/cpuc-website/about-cpuc/documents/transparency-and-reporting/fact_sheets/go156whatiscertification.pdf)
 - [Supplier Clearinghouse certification overview](https://peninsulacleanenergy.com/wp-content/uploads/2024/11/SCH-Certification-Process-Overview-Updated-060822.pdf)
 - [Stacking Capital: CDFI lenders](https://www.stacking.capital/articles/cdfi-lending-complete-guide.html)
+- [Anaheim business loans and grants](https://www.anaheim.net/5470/Business-Loans-and-Grants)
+- [Rancho Santiago CCD: Orange County SBDC](https://rsccd.edu/For-Business/Pages/Orange-County-Small-Business-Development-Center.aspx)
+- [Cal State Fullerton SBDC annual report](https://www.fullerton.edu/research/annual-report/fy-2024-25/centers-and-institutes/sbdc.html)
+- [Irvine small business clinic, January 2026](https://petrie-norris.asmdc.org/event/20260122-irvine-small-business-clinic)
 - [Crestmont Capital: California loan programs](https://www.crestmontcapital.com/blog/small-business-loan-programs-in-california-2025-guide)
