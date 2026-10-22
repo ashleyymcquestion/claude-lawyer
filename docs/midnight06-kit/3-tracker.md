@@ -31,11 +31,11 @@ Status: ⬜ not started · ✍️ drafting · 📤 ready for you to submit · �
 
 | Grant | Amount | Deadline | Status | Notes |
 |---|---|---|---|---|
-| HerRise MicroGrant | Micro | Oct 31, 2026 (verify) | ⬜ | Women-of-color owned. Due very soon |
-| Freed Fellowship | $500 monthly | Monthly (reported Oct 31) | ⬜ | Quick application |
-| Amber Grant | $10K monthly | Last day of each month | ⬜ | About a $15 fee |
-| Breva Thrive | $5K | Q4 round open | ⬜ | |
-| Tory Burch Fellows | Grant plus education | Verify on site | ⬜ | |
+| HerRise MicroGrant | $1K monthly | Oct 31, then monthly | ⬜ | About a $15 fee. `applications/herrise.md` |
+| Freed Fellowship | $500 monthly | Oct 31, then monthly | ⬜ | About a $19 fee. `applications/freed-fellowship.md` |
+| Amber Grant | $10K-$15K monthly | Oct 31, then monthly | ⬜ | $15 fee (waiver by email first). `applications/amber-grant.md` |
+| Breva Thrive | $5K | Oct 31 (Q4 round) | ⬜ | Free. `applications/breva-thrive.md` |
+| Tory Burch Fellows | Fellowship plus grant | Nov 17, 2026 | ⬜ | Needs $75K+ yearly revenue. `applications/tory-burch.md` |
 | Galaxy Grants | Varies | Check site | ⬜ | |
 | Entreprenista Evolve | $5K | Nov 30 (verify) | ⬜ | Only if 1+ year and $100K+ revenue |
 | CFDA/Vogue Fashion Fund | Up to $300K | 2027 call | ⬜ | Watch cfda.com |
