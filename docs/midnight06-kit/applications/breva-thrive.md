@@ -1,53 +1,54 @@
-# Breva Thrive Grant
+# Breva Thrive Grant: aim for the Q1 2027 round
 
-- **Official site:** breva.ai/thrive-grant (read the Official Rules PDF there)
-- **Amount:** $5,000, awarded quarterly
-- **Deadline:** the Q4 round is reported as **Oct 1-31, 2026**. Confirm on the site
+- **Apply:** breva.ai/thrive-grant (read the Official Rules there)
+- **Amount:** $5,000, quarterly
 - **Fee:** free
-- **Heads up:** one applicant reported the "apply" button goes to an eligibility check first, then the application
 
-## Eligibility check
-- [ ] For-profit, legally formed and **in good standing** (LLC active, Statement of Information filed, $800 franchise tax paid)
-- [ ] Principal place of business in the US
-- [ ] 12 months of operation is preferred, but newer businesses can apply with strong early traction
-- [ ] Some guides mention a $35,000 revenue minimum. The official rules excerpt doesn't, so treat it as unverified and apply anyway if you're close
+## Should we apply by Oct 31?
+**Probably not this round.** Breva requires a business that is **legally
+formed and in good standing**, and it favors businesses with traction and
+measurable community impact. Midnight 06 isn't formed yet.
+
+**Plan:** file the LLC this week, post content through the fall, and apply in
+the **Q1 2027 round** with real numbers (followers, views, events shot).
+
+If the LLC is approved before Oct 31, you can still submit the answers below
+this round. It's free, and the practice helps.
 
 ## What they score
-Community impact (**measurable**, not general), business viability, fit with
-their inclusive-growth mission, and how clearly you explain the use of the
-funds. Their rules say they especially welcome businesses that benefit
-historically underserved communities.
+Measurable community impact, business viability, fit with their
+inclusive-growth mission, and a clear plan for the money.
 
-## Answers
+## Answers (update the numbers before Q1)
 
 **Describe your business:**
-> Midnight 06 is a woman- and minority-owned creative, media and apparel brand
-> in [CITY], Orange County. We [WHAT YOU DO] for [WHO]. In [TIMEFRAME] we've
-> [TRACTION WITH NUMBERS].
+> Midnight 06 LLC is a women-owned creative duo from Irvine, California: a
+> photographer/videographer and a shuffle dancer who perform and create
+> content for the EDM community. One booking gives festivals, DJs and venues
+> both a live performance and professional content. Since launching in
+> [MONTH] we've [FOLLOWERS / VIEWS / EVENTS SHOT].
 
-**What measurable impact does your business have on your community?** (the most important answer)
-> Use numbers. Examples, if true:
-> - "We've paid [N] local Orange County artists, photographers and models a total of $[X] this year."
-> - "We source [X%] of our production from [local / women-owned] vendors."
-> - "We hosted [N] events drawing [N] people from [COMMUNITY]."
-> - "We donate [X%] of each drop to [ORGANIZATION]; $[TOTAL] so far."
-> Then: "With this grant we'll [EXPAND IMPACT, e.g. hire 2 local creatives
-> part-time], measured by [METRIC]."
+**What measurable impact will your business have on your community?**
+> The EDM scene runs on community, and we want to build a creator crew
+> within it. In our first year we will:
+> - Feature [N] local Orange County DJs, dancers and creators in our content, giving them free exposure
+> - Run [N] free shuffle-dance meetups in Irvine and Orange County that are open to anyone
+> - Bring on our first [1-2] paid collaborators once bookings start
+>
+> We'll track these and report them.
+
+*(Only commit to numbers you'll actually do. Breva wants measurable impact,
+and these are things you can start now with no money.)*
 
 **How will you use the $5,000?**
-> - $[X]: [inventory / production run of N pieces]
-> - $[X]: [equipment]
-> - $[X]: [marketing or launch]
-> Expected result: [e.g. "$X in new revenue within 6 months, and 1 new local hire"].
+> - $3,000: a low-light camera and lens for festival footage
+> - $600: a gimbal and wireless microphones
+> - $400: editing software
+> - $1,000: travel to our first festival to build the portfolio
+>
+> Result: a professional portfolio that converts into paid bookings in 2027.
 
-## Documents they may ask you to upload
-- Proof of formation (Articles of Organization)
-- Proof of good standing (a Secretary of State status printout)
-- Possibly revenue proof (bank statements or a P&L)
-
-## Submit checklist
-- [ ] Good standing confirmed
-- [ ] Brackets replaced with real numbers
-- [ ] Documents uploaded
-- [ ] Confirmation saved
-- [ ] Re-apply each quarter (Q1 2027)
+## Checklist
+- [ ] LLC formed and in good standing
+- [ ] Real numbers from 2-3 months of posting
+- [ ] Apply when the Q1 2027 round opens

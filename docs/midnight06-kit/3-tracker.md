@@ -9,6 +9,15 @@ Who does what:
 
 Status: ⬜ not started · ✍️ drafting · 📤 ready for you to submit · ✅ submitted · 🏆 won · ❌ closed or not a fit
 
+## Phase 0: this week
+| Step | Status |
+|---|---|
+| Name check (SOS, USPTO, social handles) | ⬜ |
+| File LLC-1 ($70) | ⬜ |
+| EIN | ⬜ |
+| First 3-5 videos posted | ⬜ |
+| Amber Grant submitted (Oct 31) | ⬜ |
+
 ## Phase 1: free steps that unlock money (do these first)
 
 | Step | Cost | Time | Status | Link |
@@ -34,12 +43,12 @@ Status: ⬜ not started · ✍️ drafting · 📤 ready for you to submit · �
 | HerRise MicroGrant | $1K monthly | Oct 31, then monthly | ⬜ | About a $15 fee. `applications/herrise.md` |
 | Freed Fellowship | $500 monthly | Oct 31, then monthly | ⬜ | About a $19 fee. `applications/freed-fellowship.md` |
 | Amber Grant | $10K-$15K monthly | Oct 31, then monthly | ⬜ | $15 fee (waiver by email first). `applications/amber-grant.md` |
-| Breva Thrive | $5K | Oct 31 (Q4 round) | ⬜ | Free. `applications/breva-thrive.md` |
-| Tory Burch Fellows | Fellowship plus grant | Nov 17, 2026 | ⬜ | Needs $75K+ yearly revenue. `applications/tory-burch.md` |
+| Breva Thrive | $5K | Q1 2027 round | ⬜ | Free. Needs a formed LLC. `applications/breva-thrive.md` |
+| Tory Burch Fellows | Fellowship plus grant | Nov 17, 2026 | ❌ | Needs $75K+ yearly revenue. Revisit in 2027 or later |
 | Galaxy Grants | Varies | Check site | ⬜ | |
-| Entreprenista Evolve | $5K | Nov 30 (verify) | ⬜ | Only if 1+ year and $100K+ revenue |
+| Entreprenista Evolve | $5K | Nov 30 | ❌ | Needs 1+ year and $100K+ revenue |
 | CFDA/Vogue Fashion Fund | Up to $300K | 2027 call | ⬜ | Watch cfda.com |
-| CA Arts Council fellowship (Orange County region) | $5K-$50K | Early 2027 | ⬜ | For you as an artist |
+| CA Arts Council fellowship (Orange County region, Arts OC) | $5K-$50K each | Early 2027 | ⬜ | Each founder applies as an individual artist (dancer; photographer/filmmaker) |
 
 ## Phase 3: loans (only if needed)
 | Lender | Amount | Status |

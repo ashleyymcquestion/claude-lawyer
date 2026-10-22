@@ -1,45 +1,46 @@
-# HerRise MicroGrant (HerSuiteSpot)
+# HerRise MicroGrant (HerSuiteSpot): ready to submit
 
-- **Official site:** hersuitespot.com (look for HerRise MicroGrant, and read their FAQ)
-- **Amount:** $1,000, one winner per month
-- **Deadline:** 11:59 PM Eastern on the last day of each month. **This round: Oct 31.** Late entries roll into the next month
+- **Apply:** hersuitespot.com (HerRise MicroGrant page; read the FAQ first)
+- **Amount:** $1,000, one winner a month
+- **Deadline:** Oct 31, 11:59 PM Eastern (8:59 PM in Irvine), then monthly
 - **Fee:** reported as $15
-- **Winners** are announced at HerSuiteSpot's First Friday Mixer the following month (you don't have to attend)
 
-## Eligibility check (confirm on the official FAQ)
-- [ ] At least 51% women-owned
-- [ ] Registered in the US
-- [ ] Under $1 million in yearly revenue
-- [ ] Not a nonprofit, franchise or direct-sales business
-- [ ] Aimed at under-resourced women, including women of color. One site says owners must identify as Black, Latina, Asian, Indigenous or multiracial, so check the official rules.
+## Eligibility: check the official FAQ first
+- [x] At least 51% women-owned (100%)
+- [x] Under $1M revenue
+- [x] Not a nonprofit, franchise or direct-sales business
+- [ ] **Registered in the US:** file the LLC first. If it isn't approved by Oct 31, apply in November
+- [ ] **Who it's for:** HerRise is aimed at under-resourced women, including women of color. One site says owners must identify as Black, Latina, Asian, Indigenous or multiracial. If the official FAQ requires that, apply only if a founder genuinely identifies that way. Otherwise, skip this one; the other grants fit you fine
 
-## Answers
-Sources disagree on whether the form has two or five written questions. These
-drafts cover the usual ones; trim them to fit.
+## Answers to paste
 
 **Describe your business:**
-> Midnight 06 is a [Black / Latina / ...]-woman-owned creative, media and
-> apparel brand in [CITY], Orange County. We make [PRODUCTS] for [CUSTOMERS],
-> and we've [TRACTION].
+> Midnight 06 is a women-owned creative duo from Irvine, California: a
+> photographer/videographer and a shuffle dancer who perform and create
+> content in the EDM world. One booking gets a festival, DJ or venue both a
+> live performance and professional photo and video content. We're launching
+> our TikTok, Instagram and YouTube now to build our portfolio and audience.
 
-**What challenges have you faced as an under-resourced founder?**
-> [ONE REAL EXAMPLE: e.g. "I funded our first 50 pieces from my paycheck
-> because I couldn't get a business loan without two years of revenue."
-> Be honest and specific.]
+**What challenges have you faced?**
+> We're two women starting from zero: no investors, no revenue yet, and an
+> industry where the people behind the camera and on the stage are rarely
+> women running their own business. The hardest part is the startup gap.
+> Promoters book creators with a portfolio, and building one takes
+> professional equipment and getting to the shows.
 
 **How will you use $1,000?**
-> $1,000 would cover [ONE CONCRETE THING, e.g. "the full sample run for our
-> next drop (6 samples at about $150 each plus shipping)" or "our CDTFA-ready
-> point-of-sale setup and booth fees for two Orange County markets"], which
-> would [RESULT].
+> $1,000 would buy the core tools for our first professional content: a
+> gimbal and wireless microphones (about $600) and a year of editing software
+> (about $400). Every video we make after that is portfolio-quality, which is
+> what gets us our first paid booking.
 
-**What are your goals for the next year?**
-> [2-3 measurable goals, e.g. "Grow to $X monthly revenue, launch wholesale
-> with 2 local boutiques, and complete our women- and minority-owned
-> certifications."]
+**Goals for the next year:**
+> 1. Launch on TikTok, Instagram and YouTube and grow a real audience in the EDM community
+> 2. Shoot and perform at our first 3 festivals or events, starting in Southern California
+> 3. Land our first paid bookings with promoters, artists or hotels near venues
 
 ## Submit checklist
-- [ ] Brackets replaced
-- [ ] Fee paid
-- [ ] Confirmation saved, tracker updated
-- [ ] Re-apply every month
+- [ ] Eligibility confirmed on the official FAQ
+- [ ] LLC registered (or wait for November)
+- [ ] Fee paid, confirmation saved, tracker updated
+- [ ] Re-apply monthly

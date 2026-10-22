@@ -1,49 +1,48 @@
 # Midnight 06 grant battle plan
 
 The approach: **apply to everything you qualify for, every round, every month,
-and get better each time.** Monthly grants pick winners from whoever applied
-that month, so a "no" just means try again next month with a stronger
-application. Most winners didn't win on their first try.
+and get stronger each time.** Monthly grants pick from whoever applied that
+month, so a "no" just means re-apply next month with more followers, more
+content and a sharper story.
 
-Updated October 22, 2026. Each packet in `applications/` has the official
-link, eligibility check, fee, and answers ready to paste.
+Updated October 22, 2026, for a pre-revenue, women-owned creative duo in
+Irvine. Every packet in `applications/` has the official link, an eligibility
+check and answers ready to paste.
 
-## This week (deadline Oct 31, 11:59 PM Eastern = 8:59 PM in California)
+## This week: Oct 22-31
 
-| # | Grant | Amount | Fee | Packet | Time to submit |
-|---|---|---|---|---|---|
-| 1 | Amber Grant (WomensNet) | $10K-$15K monthly, plus $50K-$75K year-end | $15 (waiver: email them **before** applying) | `applications/amber-grant.md` | 20 min |
-| 2 | HerRise MicroGrant (HerSuiteSpot) | $1,000 monthly | About $15 | `applications/herrise.md` | 20 min |
-| 3 | Freed Fellowship | $500 monthly, plus a $2,500 year-end grant | About $19 | `applications/freed-fellowship.md` | 20 min |
-| 4 | Breva Thrive (Q4 round, Oct 1-31) | $5,000 | Free | `applications/breva-thrive.md` | 30 min |
-| 5 | Hello Alice and IFundWomen profiles | Matched to future grants | Free | `applications/profiles.md` | 45 min total |
-
-October fees total about $49. One Amber Grant win pays that back 200 times over.
+| # | Action | Why | Where |
+|---|---|---|---|
+| 1 | **File the LLC** (name check, LLC-1, then EIN) | Unlocks almost everything else | `5-llc-this-week.md` |
+| 2 | **Claim the same handle on TikTok, Instagram and YouTube** and post your first 3-5 videos | Every application gets stronger with something to show | |
+| 3 | **Amber Grant**: submit by **Oct 31, 8:59 PM in Irvine** | $10K-$15K a month, and it accepts business ideas | `applications/amber-grant.md` |
+| 4 | **HerRise and Freed**: submit by Oct 31 *if the LLC is approved in time* and you're eligible; otherwise Nov 1 | $1,000 and $500 monthly | `applications/herrise.md`, `applications/freed-fellowship.md` |
+| 5 | Hello Alice and IFundWomen profiles (after the LLC) | Matched to future grants automatically | `applications/profiles.md` |
 
 ## November
-
-| Date | Action |
-|---|---|
-| Nov 1-30 | Re-apply: Amber (new month), HerRise, Freed. Improve your answers using any feedback (Freed sends a score) |
-| **Nov 17** | Tory Burch Fellows deadline, **only if revenue is $75,000+ a year**. See `applications/tory-burch.md` |
-| Nov 30 | Entreprenista Evolve, only if 1+ year in business and $100K+ revenue |
-| All month | Start the free CPUC Supplier Clearinghouse and SBA WOSB certifications. Book a free OC SBDC advisor |
+- Re-apply: Amber, HerRise, Freed (each month)
+- Draft and sign the **operating agreement**, which decides who owns the content (see `5-llc-this-week.md`)
+- Book a **free OC SBDC advisor** (Cal State Fullerton). Ask about pitch competitions and Orange County grants for creative startups
+- Start shooting: local Orange County / Los Angeles EDM events and shuffle meetups. Build the portfolio for free
+- Skip: Tory Burch (needs $75K revenue) and Entreprenista (needs $100K revenue)
 
 ## December
-- Amber Grant **Fashion & Interiors** category round (reported to run in December). Your one Amber application counts toward every category automatically, so keep re-applying monthly.
-- Re-apply: Amber, HerRise, Freed.
+- Amber Grant **Fashion & Interiors** category round. Your monthly application counts automatically
+- Re-apply: Amber, HerRise, Freed
 
 ## Early 2027
-- California Arts Council Individual Artist Fellowship (Orange County region): $5K-$50K
-- CFDA/Vogue Fashion Fund: watch for the 2027 call
-- Breva Thrive Q1 round
-- Hello Alice rounds as they're announced
+- **California Arts Council Individual Artist Fellowship (Orange County region, run by Arts Orange County):** $5K-$50K. Each of you can apply **as an individual artist**, one as a dancer and one as a photographer/filmmaker. Watch artsoc.org for the 2027 window
+- **Breva Thrive Q1 round:** $5,000 (`applications/breva-thrive.md`), once you have 2-3 months of numbers
+- **Hello Alice rounds** as they're announced
 
-## Rules for winning
-1. **Never make anything up.** Funders check, and a false statement can disqualify you or worse. Real, specific facts beat polished claims.
-2. **Use numbers:** units sold, followers, events, dollars, dates.
-3. **Say exactly how you'll spend the money**, with line items.
-4. **Use your real voice.** Judges read thousands of generic answers, and a true story stands out.
-5. **Apply early in the month.** Some reviewers start before the deadline.
-6. **Keep a log** of what you submitted and when (use the tracker).
-7. **Scam check:** never pay to *receive* a grant, never give out bank logins, and ignore "you've won" messages for grants you didn't apply to.
+## Why you can win as a pre-revenue startup
+1. **Your concept is unusual:** a dancer-plus-filmmaker duo that delivers performance and content in one booking, with a hospitality angle.
+2. **The market is real:** electronic music hit $15.1 billion in 2025, up 7% (IMS Business Report 2026).
+3. **Show, don't tell:** a link to 5 strong videos beats any paragraph. Post before you apply.
+
+## Rules
+1. **Never make anything up.** Pre-revenue is fine; say it plainly. Invented numbers can get you disqualified, or worse.
+2. **Every dollar has a job.** Price the actual gear and use those numbers.
+3. **Update each month:** new follower counts, shoots and the LLC filed.
+4. **Log every submission** in `3-tracker.md`.
+5. **Scam check:** never pay to *receive* a grant, never give out bank logins, and ignore "you've won" messages for grants you didn't apply to.
