@@ -17,7 +17,13 @@ just an idea. **None of it costs money.**
 - [ ] Pin your best video. Note the views and followers after 48 hours, because those numbers go in the application
 
 ## Day 2-6: get one "yes" from the industry
-Send the message below to **at least 20** people:
+**Start with hotels and Airbnbs.** Festival Stays is your lead pitch, and small
+property owners answer messages faster than festivals. One property saying
+"come shoot our place for [EVENT] weekend" is the strongest proof you can put
+in the application. Good targets: independent hotels and Airbnb hosts in
+Las Vegas (EDC), Long Beach and Downtown LA, and around Orange County venues.
+
+Send the messages below to **at least 20** people in total:
 - Local EDM promoters and event pages in Orange County and LA (find them through Instagram event posts and on Eventbrite or Posh)
 - Up-and-coming DJs who play SoCal shows
 - Boutique hotels and Airbnb hosts in Irvine, Costa Mesa, Long Beach and Las Vegas near venues

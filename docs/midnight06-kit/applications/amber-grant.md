@@ -37,8 +37,16 @@ delete that sentence rather than guess.
 > reached [X] views and [Y] followers in a week." / "[PROMOTER or DJ] has
 > invited us to perform and shoot at [EVENT] on [DATE]."]
 >
-> Our plan is to grow from local Orange County and LA events to festivals like
-> EDC and Ultra, and international stages like Starlight in Egypt.
+> Our first service is **Festival Stays**: small hotels and Airbnbs near
+> EDM festivals compete with big chains for the same sold-out weekends. We
+> shoot "festival weekend at your place" reels and photos, with real dancing
+> and real festival energy, that help independent properties win those
+> bookings. Every shoot also builds our own channels.
+> [PROOF: e.g. "We've pitched [N] Orange County and Las Vegas properties, and
+> [PROPERTY] booked us for [EVENT] weekend."]
+>
+> From there we'll grow from local Orange County and LA events to festivals
+> like EDC and Ultra, and international stages like Starlight in Egypt.
 
 **What motivates you / the story behind the business:**
 > [THE SPECIFIC NIGHT: 3-4 sentences about a real moment. Which show, what
@@ -56,10 +64,11 @@ delete that sentence rather than guess.
 **Opportunities and challenges:**
 > The opportunity is real: the global electronic music industry hit a record
 > $15.1 billion in 2025, up 7% (IMS Business Report 2026), and TikTok has
-> become one of the biggest ways fans discover the scene. Every festival, DJ
-> and nearby hotel needs fresh, authentic content. We see an untapped angle:
-> pairing festival weekends with boutique and luxury stays near the venue, and
-> creating content for both the event and the property.
+> become one of the biggest ways fans discover the scene. Festival weekends
+> sell out hotels and rentals near the venue, but small independent
+> properties can't afford agency content and get lost next to the chains.
+> That's our opening: we give small hospitality businesses the content to
+> compete, and we bring festival-goers a better place to stay.
 >
 > [PROOF if you have it: "We've already reached out to [N] promoters and
 > hotels, and [N] said yes / asked for more."]
@@ -77,8 +86,9 @@ delete that sentence rather than guess.
 > - $[X]: social ads aimed at promoters and festival-goers in SoCal
 > - $[X]: travel to [2-3 SPECIFIC EVENTS AND DATES] to build the portfolio
 >
-> By [MONTH] 2027 we'll have a portfolio from [N] events and our first paid
-> bookings. We'll share our progress with WomensNet.
+> By [MONTH] 2027 we'll have a portfolio from [N] events, [N] partner
+> properties, and our first paid bookings. We'll share our progress with
+> WomensNet.
 
 ## Before you hit submit
 - [ ] Every [SLOT] is filled with something true, or deleted

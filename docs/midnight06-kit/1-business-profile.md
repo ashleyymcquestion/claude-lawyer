@@ -27,6 +27,25 @@ or passwords here.
 
 ## What the business does
 - **In one sentence:** Midnight 06 is a two-woman creative duo, a photographer/videographer and a shuffle dancer, that creates performance and content for the EDM world.
+- **Grant pitch (lead with this):** We help small hotels and Airbnbs near EDM festivals win festival-weekend bookings, with dance-driven video and photo content made by festival insiders.
+
+## Festival Stays (the hotel/Airbnb offer)
+The idea: small, independent hotels, boutique hotels and Airbnb hosts near
+festival venues compete with big chains for the same festival weekends. We
+make the content that shows festival-goers why *their* place is the spot:
+getting ready, pre-party, the ride to the venue, the after-hours afterglow.
+
+- **Customers:** independent hotels, boutique hotels and short-term-rental hosts within reach of festival venues (Las Vegas for EDC, Miami for Ultra, SoCal venues, and international destinations later)
+- **What they get:** a "festival weekend at [property]" reel, photos for their listing and socials, and short clips sized for TikTok and Instagram
+- **How we get paid:** a flat content fee, a free stay plus a fee, or (later) a commission on bookings from our content
+- **Why it matters:** it helps small, local hospitality businesses compete with big chains, and every shoot doubles as content for our own channels
+- **Later:** curated "Midnight 06 festival stay" packages for our community at partner properties
+
+**Things to sort out before the first shoot (the paralegal team can draft these):**
+- A short content agreement: fee, deliverables, who owns the footage, and how each side can use it
+- A property release from the owner, plus model releases for anyone filmed
+- Platform rules: check Airbnb's and the property's policies on commercial filming
+- Paid or comped posts need a clear disclosure (#ad / "paid partnership"), per FTC rules
 - **What we sell:** a duo package of live shuffle dance performance plus professional photo and video content, for festivals, events, artists, venues and hospitality brands
 - **Who buys:** EDM festivals and promoters (small local events up to EDC, Ultra and international events like Starlight in Egypt), DJs and artists, event venues, and luxury, boutique and short-term-rental hospitality near festival venues that needs fresh content
 - **What's different:** we perform *and* film, so one booking delivers both the show and the content. We also want to pair festivals with nearby luxury and boutique stays to turn attending a festival into a full experience, and to build a community of creators in the scene
