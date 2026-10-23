@@ -79,6 +79,26 @@ python -m paralegal pending
 python -m paralegal approve matters/20261022-... --reviewer "Jane Attorney"
 ```
 
+## Tenant case file and deadlines
+
+For a tenant facing a rent dispute or eviction (for example, a roommate who kept the rent money):
+
+```bash
+# Start a private case file in cases/ (never committed): payment log, timeline, evidence checklist
+python -m paralegal case new my-rent-case
+
+# After filling in payment-log.csv and timeline.csv: totals who paid whom, sorts the timeline
+python -m paralegal case summary cases/my-rent-case
+
+# Deadlines, counted in code (court days skip weekends and court holidays)
+python -m paralegal deadline --served 2026-10-20 --notice                  # 3-day notice
+python -m paralegal deadline --served 2026-10-20 --method substituted      # eviction court papers
+```
+
+When a court holiday is uncertain, the deadline tool gives the earlier date. The eviction
+analyst uses the same code for every deadline it reports. Always confirm with the court clerk
+or a self-help center.
+
 ## Customizing
 
 - `knowledge/*.md`: the reference map every agent reads. Add your local rules, templates and firm preferences here.

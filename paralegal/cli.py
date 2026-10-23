@@ -6,7 +6,9 @@ import argparse
 import sys
 from pathlib import Path
 
-from . import matters, team
+from datetime import date
+
+from . import casefile, deadlines, matters, team
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -24,6 +26,17 @@ def main(argv: list[str] | None = None) -> int:
     ok.add_argument("--reviewer", required=True, help="Name of the person who reviewed it.")
     ok.add_argument("--notes", default="")
     ok.add_argument("--force", action="store_true", help="Approve after you fixed NOT FOUND citations by hand.")
+
+    dl = sub.add_parser("deadline", help="Work out an eviction deadline in plain code.")
+    dl.add_argument("--served", required=True, type=date.fromisoformat, help="Date served, YYYY-MM-DD.")
+    dl.add_argument("--notice", action="store_true", help="A 3-day notice, not court papers.")
+    dl.add_argument("--method", choices=list(deadlines.SERVICE_DELAY_DAYS), default="personal",
+                    help="How court papers were served (personal = handed to you).")
+
+    case = sub.add_parser("case", help="A tenant case file: payment log, timeline, evidence.")
+    case_sub = case.add_subparsers(dest="case_command", required=True)
+    case_sub.add_parser("new", help="Start a case file in cases/.").add_argument("name")
+    case_sub.add_parser("summary", help="Total the payment log and list the timeline.").add_argument("folder", type=Path)
 
     args = parser.parse_args(argv)
 
@@ -46,6 +59,25 @@ def main(argv: list[str] | None = None) -> int:
             print(exc, file=sys.stderr)
             return 1
         print(f"Approved by {status['reviewer']} at {status['reviewed']}")
+    elif args.command == "deadline":
+        d = deadlines.notice_expires(args.served) if args.notice else deadlines.eviction_response(args.served, args.method)
+        print(d.report())
+    elif args.command == "case" and args.case_command == "new":
+        try:
+            folder = casefile.new(args.name)
+        except ValueError as exc:
+            print(exc, file=sys.stderr)
+            return 1
+        print(f"Started {folder}. Open {folder / 'README.md'} to see what goes where.")
+    elif args.command == "case":
+        try:
+            text = casefile.summary(args.folder)
+        except (FileNotFoundError, ValueError) as exc:
+            print(exc, file=sys.stderr)
+            return 1
+        (args.folder / "summary.md").write_text(text)
+        print(text)
+        print(f"Saved {args.folder / 'summary.md'}", file=sys.stderr)
     return 0
 
 

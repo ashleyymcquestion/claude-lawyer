@@ -16,12 +16,13 @@ to a client or filed by the team itself.
 from __future__ import annotations
 
 import base64
+from datetime import date
 from pathlib import Path
 from typing import Any, Callable
 
 import anthropic
 
-from . import citations, config
+from . import citations, config, deadlines
 from .llm import Agent, run_agent
 
 GROUND_RULES = f"""\
@@ -78,6 +79,26 @@ def _web_tools(domains: list[str] | None) -> list[dict[str, Any]]:
     return [search, fetch]
 
 
+def _deadline(args: dict[str, Any]) -> str:
+    served = date.fromisoformat(args["served"])
+    if args["kind"] == "notice":
+        return deadlines.notice_expires(served).report()
+    return deadlines.eviction_response(served, args["method"]).report()
+
+
+DEADLINE_TOOL = (
+    _tool(
+        "calculate_deadline",
+        "Work out an eviction deadline in code. Always use this instead of counting days yourself, "
+        "and copy its report into your answer.",
+        kind="'notice' for a 3-day notice, 'response' for court papers (summons and complaint).",
+        served="Date served, YYYY-MM-DD.",
+        method="For court papers: 'personal', 'substituted' or 'posting'. Use 'personal' for a notice.",
+    ),
+    _deadline,
+)
+
+
 def legal_researcher() -> Agent:
     return Agent(
         name="legal researcher",
@@ -114,6 +135,7 @@ def eviction_analyst() -> Agent:
     return Agent(
         name="eviction analyst",
         effort="high",
+        tools={"calculate_deadline": DEADLINE_TOOL},
         server_tools=_web_tools(config.LEGAL_SOURCE_DOMAINS),
         system=_system(
             "Eviction defense analyst for the tenant. Read every notice, summons, "
@@ -121,8 +143,8 @@ def eviction_analyst() -> Agent:
             "through this checklist in order and say what you found at each step:\n"
             "1. Stage and deadline: no notice yet, notice received, or court papers "
             "served. If court papers were served, put the response deadline first, "
-            "with the service date, method and the date math (court days; confirm "
-            "the current rule in Code of Civil Procedure 1167 on leginfo).\n"
+            "with the service date and method, using the calculate_deadline tool "
+            "(never count court days yourself). Same for a 3-day notice.\n"
             "2. Who is who: everyone on the lease, everyone living there, and "
             "whether each is a co-tenant, subtenant or occupant. Say who the "
             "landlord can hold responsible for the rent and why.\n"
@@ -148,6 +170,8 @@ def eviction_analyst() -> Agent:
             "landlord directly with a receipt, tell the landlord in writing, "
             "preserve texts and payment app records, do not move out or stop "
             "responding without advice) and local legal aid to contact.\n"
+            "If a case summary from the tenant's payment log is attached, use its "
+            "totals as given and point out any gaps it lists. "
             "Finish with: an evidence list (what exists, what to get), a dated "
             "timeline, and the documents the drafter should prepare, each with "
             "its purpose and the facts it should use."

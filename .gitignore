@@ -1,5 +1,6 @@
 matters/*
 !matters/.gitkeep
+cases/
 __pycache__/
 *.egg-info/
 .env

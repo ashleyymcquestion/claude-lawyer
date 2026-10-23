@@ -6,6 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 KNOWLEDGE_DIR = ROOT / "knowledge"
 MATTERS_DIR = Path(os.environ.get("PARALEGAL_MATTERS_DIR", ROOT / "matters"))
+# Tenant case files (payment logs, timelines, evidence). Private: never committed.
+CASES_DIR = Path(os.environ.get("PARALEGAL_CASES_DIR", ROOT / "cases"))
 
 MODEL = os.environ.get("PARALEGAL_MODEL", "claude-opus-5-5")
 JURISDICTION = "California"

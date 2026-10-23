@@ -148,3 +148,66 @@ def test_eviction_analyst_gets_notice_and_rules(tmp_path):
     assert "relief from forfeiture" in analyst["system"]
     web = [t for t in analyst["tools"] if t["name"] == "web_search"][0]
     assert "leginfo.legislature.ca.gov" in web["allowed_domains"]
+
+
+def test_response_deadline_counts_court_days():
+    from datetime import date
+    from paralegal import deadlines
+
+    # Tuesday, no holidays: 10 court days later is Tuesday Nov 3.
+    assert deadlines.eviction_response(date(2026, 10, 20)).safe_date == date(2026, 11, 3)
+    # Veterans Day (Wed Nov 11) is skipped.
+    assert deadlines.eviction_response(date(2026, 11, 5)).safe_date == date(2026, 11, 20)
+    # Substituted service completes 10 calendar days later (Oct 30), then Nov 11 is skipped.
+    assert deadlines.eviction_response(date(2026, 10, 20), "substituted").safe_date == date(2026, 11, 16)
+
+
+def test_uncertain_holiday_gives_the_earlier_date():
+    from datetime import date
+    from paralegal import deadlines
+
+    # July 4, 2026 is a Saturday; courts may close Friday July 3. Count it as open to be safe.
+    d = deadlines.eviction_response(date(2026, 7, 2))
+    assert (d.safe_date, d.possibly_later) == (date(2026, 7, 16), date(2026, 7, 17))
+    assert "Thursday, July 16, 2026" in d.report()
+
+
+def test_three_day_notice_skips_weekend():
+    from datetime import date
+    from paralegal import deadlines
+
+    assert deadlines.notice_expires(date(2026, 10, 23)).safe_date == date(2026, 10, 28)
+
+
+def test_case_file_totals_payments(tmp_path, monkeypatch):
+    from paralegal import casefile
+
+    monkeypatch.setattr(config, "CASES_DIR", tmp_path)
+    folder = casefile.new("rent")
+    (folder / "payment-log.csv").write_text(
+        "date,from,to,amount,method,for,proof,notes\n"
+        "2026-08-01,Me,Roommate,\"$1,200.00\",Venmo,rent 2026-08,venmo-aug.png,\n"
+        "2026-09-01,Me,Roommate,1200,Zelle,rent 2026-09,,\n"
+        "2026-09-03,Roommate,Landlord,500,check,rent 2026-09,ledger.pdf,\n"
+        "bad,Me,Roommate,10,cash,,x,\n"
+    )
+    text = casefile.summary(folder)
+    assert "| Me | Roommate | $2,400.00 |" in text
+    assert "| Roommate | Landlord | $500.00 |" in text
+    assert "line 3: no proof listed" in text
+    assert "line 5: date 'bad'" in text
+    with pytest.raises(ValueError):
+        casefile.new("rent")
+
+
+def test_cli_deadline(capsys):
+    from paralegal import cli
+
+    assert cli.main(["deadline", "--served", "2026-10-23", "--notice"]) == 0
+    assert "Wednesday, October 28, 2026" in capsys.readouterr().out
+
+
+def test_analyst_can_calculate_deadlines():
+    analyst = team.eviction_analyst()
+    report = analyst.tools["calculate_deadline"][1]({"kind": "response", "served": "2026-10-20", "method": "personal"})
+    assert "Tuesday, November 3, 2026" in report
