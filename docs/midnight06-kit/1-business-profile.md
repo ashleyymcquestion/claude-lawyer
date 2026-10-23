@@ -52,6 +52,21 @@ getting ready, pre-party, the ride to the venue, the after-hours afterglow.
 - **Why "Midnight 06":** all the best times start after midnight
 - **Long-term vision:** travel the world's EDM festivals creating content, build a team and community of creators in this niche, then pay local artists and give back
 
+## Community (long-term vision)
+A community for EDM dancers and DJs, especially smaller creators who struggle
+to get noticed. Ways to start now, at little or no cost:
+- **Creator Spotlight:** a regular series on our channels featuring a small DJ or dancer (an interview clip, a set excerpt or a dance collab), tagging them so their audience grows too
+- **Monthly free shuffle meetup** in Irvine / Orange County, filmed for content
+- **A group chat or Discord** for local dancers, DJs and creators to share gigs and collab
+- **Later:** a showcase night with small DJs and dancers, ideally at a partner venue or property. And eventually a physical or online "Midnight 06" community space
+
+Track the numbers from day one: creators featured, views sent their way,
+meetup attendance and community members. Grant judges want exactly these.
+
+**Before filming others:** get a quick written OK (a release) from anyone
+featured, and permission to use a DJ's music in posts. Music rights on
+TikTok and YouTube are strict, so check the platform's rules.
+
 ## Market
 The global electronic music industry hit a record **$15.1 billion in 2025, up
 7%**, per the IMS Business Report 2026, the industry's standard annual

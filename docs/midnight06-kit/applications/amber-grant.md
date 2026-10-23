@@ -46,7 +46,11 @@ delete that sentence rather than guess.
 > [PROPERTY] booked us for [EVENT] weekend."]
 >
 > From there we'll grow from local Orange County and LA events to festivals
-> like EDC and Ultra, and international stages like Starlight in Egypt.
+> like EDC and Ultra, and international stages like Starlight in Egypt. And
+> we're building a community around it: our Creator Spotlight series features
+> smaller EDM dancers and DJs who don't get seen, and we [host a free monthly
+> shuffle meetup in Orange County, if true]. [PROOF: "So far we've featured
+> [N] local creators."]
 
 **What motivates you / the story behind the business:**
 > [THE SPECIFIC NIGHT: 3-4 sentences about a real moment. Which show, what
