@@ -24,6 +24,7 @@ LEGAL_SOURCE_DOMAINS = [
     "selfhelp.courts.ca.gov",
     "courtlistener.com",  # case law
     "law.justia.com",
+    "lawhelpca.org",  # legal aid directory
     "hcd.ca.gov",  # Housing and Community Development
     "dre.ca.gov",  # California Tenants guide
     "oag.ca.gov",  # Attorney General tenant guidance

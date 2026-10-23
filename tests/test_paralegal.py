@@ -131,3 +131,20 @@ def test_cli_saves_matter(tmp_path, monkeypatch, capsys):
     assert cli.main(["ask", "Draft a repair request"]) == 0
     [folder] = list(tmp_path.iterdir())
     assert json.loads((folder / "status.json").read_text())["status"] == "pending_review"
+
+
+def test_eviction_analyst_gets_notice_and_rules(tmp_path):
+    notice = tmp_path / "notice.txt"
+    notice.write_text("3-day notice to pay rent or quit: $2,400.")
+    client = FakeClient([
+        _call("ask_eviction_analyst", task="Roommate kept the rent. Work up the notice."),
+        _text("Checklist and document list"),
+        _text("Done"),
+    ])
+    team.handle("My roommate kept the rent money", [notice], client=client, log=lambda _: None)
+    supervisor, analyst, _ = client.requests
+    assert "ask_eviction_analyst" in {t["name"] for t in supervisor["tools"]}
+    assert analyst["messages"][0]["content"][0]["source"]["data"].startswith("3-day notice")
+    assert "relief from forfeiture" in analyst["system"]
+    web = [t for t in analyst["tools"] if t["name"] == "web_search"][0]
+    assert "leginfo.legislature.ca.gov" in web["allowed_domains"]

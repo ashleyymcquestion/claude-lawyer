@@ -12,6 +12,7 @@ produces is a draft that a human reviews before anyone relies on it.
 ```
 you ──> supervising associate ──┬── legal researcher   searches official CA sources only (leginfo, courts.ca.gov, CourtListener...)
                                 ├── contract reviewer  reads leases/contracts you attach, flags risky or illegal clauses
+                                ├── eviction analyst   works up notices, eviction papers and roommate rent disputes for the tenant
                                 ├── drafter            demand letters, notices, responses, agreements
                                 ├── funding scout      grants, loans and certifications for your business
                                 └── citation checker   plain code: checks every case cited with CourtListener
@@ -63,6 +64,9 @@ python -m paralegal ask "Review this lease for a tenant in Los Angeles. Flag any
 
 # Draft a document
 python -m paralegal ask "Draft a security deposit demand letter. Tenant moved out 30 days ago, landlord kept the full deposit with no itemized statement."
+
+# Eviction defense or a roommate who kept the rent
+python -m paralegal ask "I pay my share of rent to my roommate, who is on the lease with me. She kept it and the landlord says we owe 2 months. We're in [CITY]. What do I do, and prepare everything I need." --attach notice.pdf venmo.pdf texts.pdf
 
 # Small business
 python -m paralegal ask "What does Midnight 06 LLC need to stay in good standing in California and to sell apparel online?"

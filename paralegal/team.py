@@ -7,6 +7,7 @@ to a client or filed by the team itself.
     supervising associate
       ├── legal researcher    (searches official California sources only)
       ├── contract reviewer   (reads leases and contracts you attach)
+      ├── eviction analyst    (notices, eviction papers, rent and roommate disputes)
       ├── drafter             (letters, notices, agreements, checklists)
       ├── funding scout       (grants, loans, certifications for the LLC)
       └── citation checker    (plain code, see citations.py)
@@ -109,6 +110,51 @@ def contract_reviewer() -> Agent:
     )
 
 
+def eviction_analyst() -> Agent:
+    return Agent(
+        name="eviction analyst",
+        effort="high",
+        server_tools=_web_tools(config.LEGAL_SOURCE_DOMAINS),
+        system=_system(
+            "Eviction defense analyst for the tenant. Read every notice, summons, "
+            "complaint, lease, receipt and message you are given, then work "
+            "through this checklist in order and say what you found at each step:\n"
+            "1. Stage and deadline: no notice yet, notice received, or court papers "
+            "served. If court papers were served, put the response deadline first, "
+            "with the service date, method and the date math (court days; confirm "
+            "the current rule in Code of Civil Procedure 1167 on leginfo).\n"
+            "2. Who is who: everyone on the lease, everyone living there, and "
+            "whether each is a co-tenant, subtenant or occupant. Say who the "
+            "landlord can hold responsible for the rent and why.\n"
+            "3. The money: a ledger of rent due, what the tenant paid, to whom, "
+            "how, and the proof for each payment. If rent went through a "
+            "roommate or co-tenant who did not pay the landlord, show exactly "
+            "where the money stopped.\n"
+            "4. Notice defects: notice type and period, amount demanded (rent "
+            "only, no fees), names and address, service method, required "
+            "language (Code of Civil Procedure 1161-1162).\n"
+            "5. Just cause and local rules: whether the Tenant Protection Act "
+            "(Civil Code 1946.2) and any city rent or eviction ordinance cover "
+            "the unit, and whether they were followed. Say which ones you checked.\n"
+            "6. Defenses and leverage: retaliation, habitability, discrimination, "
+            "waiver by accepting rent, payment or tender within the notice "
+            "period, relief from forfeiture. For each: the facts that support it, "
+            "the citation, and how strong it is (strong/possible/weak).\n"
+            "7. Claims against others: what the tenant can recover from a "
+            "roommate or anyone else who took the rent money (small claims "
+            "court, demand letter first, the current small claims limit), and "
+            "whether a police report fits the facts.\n"
+            "8. Protect the tenant now: concrete steps for this week (pay the "
+            "landlord directly with a receipt, tell the landlord in writing, "
+            "preserve texts and payment app records, do not move out or stop "
+            "responding without advice) and local legal aid to contact.\n"
+            "Finish with: an evidence list (what exists, what to get), a dated "
+            "timeline, and the documents the drafter should prepare, each with "
+            "its purpose and the facts it should use."
+        ),
+    )
+
+
 def drafter() -> Agent:
     return Agent(
         name="drafter",
@@ -169,6 +215,15 @@ def supervising_associate(
             ),
             delegate(contract_reviewer, with_attachments=True),
         ),
+        "ask_eviction_analyst": (
+            _tool(
+                "ask_eviction_analyst",
+                "Have the eviction analyst work up a tenant's notice, eviction case, unpaid rent "
+                "or roommate rent dispute, using any documents the user attached.",
+                task=task,
+            ),
+            delegate(eviction_analyst, with_attachments=True),
+        ),
         "ask_drafter": (
             _tool("ask_drafter", "Have the drafter write a document.", task=task),
             delegate(drafter),
@@ -192,6 +247,9 @@ def supervising_associate(
             "delegate to specialists with complete instructions (they can't see "
             "this conversation). Typical flow: research first, then review or "
             "draft using that research, then run check_citations on the result. "
+            "For a notice, eviction, unpaid rent or roommate rent problem, start "
+            "with the eviction analyst, then have the drafter prepare each "
+            "document the analyst lists. "
             "Fix or remove anything the check marks NOT FOUND. "
             "Finish with a package for the human reviewer:\n"
             "1. Summary (3-5 sentences)\n"
@@ -228,5 +286,5 @@ def handle(
     attachments = [load_attachment(p) for p in attachment_paths]
     lead = supervising_associate(attachments, client, log)
     names = ", ".join(p.name for p in attachment_paths)
-    prompt = request + (f"\n\nAttached for the contract reviewer: {names}" if names else "")
+    prompt = request + (f"\n\nAttached for the contract reviewer and eviction analyst: {names}" if names else "")
     return run_agent(lead, prompt, client=client, log=log)
